@@ -8,7 +8,6 @@ public class SearchBox extends BasePage{
 
     By searchBoxLocator = By.id("search");
 
-
     public SearchBox(WebDriver driver) {
         super(driver);
     }

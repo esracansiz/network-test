@@ -38,22 +38,19 @@ public class Test_Add_Product_To_Cart extends BaseTest {
     @Order(3)
     public void add_product_to_cart(){
         productDetailPage.addToCart();
-        productDetailPage.clickToCart();
 
         Assertions.assertTrue(homePage.isProductCountUp(),
                 "Product count did not increase!");
     }
 
-    @Test
-    @Order(4)
-    public void go_to_cart(){
-        driver.get("https://network.com.tr/cart");
-
-       /* Assertions.assertTrue(cartPage.checkIfProductAdded() ,
-                "Product was not added to cart!");*/
-    }
-
-
+//    @Test
+//    @Order(4)
+//    public void go_to_cart(){
+//
+//
+//       /* Assertions.assertTrue(cartPage.checkIfProductAdded() ,
+//                "Product was not added to cart!");*/
+//    }
 
 
 }

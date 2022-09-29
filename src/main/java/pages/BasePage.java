@@ -23,7 +23,7 @@ public class BasePage {
     }
 
     public void click(By locator){
-        find(locator).click();
+        driver.findElement(locator).click();
     }
 
     public void type(By locator , String text){

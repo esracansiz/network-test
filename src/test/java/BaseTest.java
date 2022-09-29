@@ -10,7 +10,7 @@ import testlogger.TestResultLogger;
 @ExtendWith(TestResultLogger.class)
 public class BaseTest {
 
-    WebDriver driver ;
+    public static WebDriver driver ;
 
     @BeforeAll
     public void setUp(){
@@ -18,11 +18,16 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.get("https://www.network.com.tr/");
         driver.manage().window().maximize();
+        System.out.println("Driver ayağa kalktı");
     }
 
     @AfterAll
     public void tearDown(){
-        driver.quit();
+        if (driver != null){
+            driver.close();
+            driver.quit();
+        }
+
     }
 
 }

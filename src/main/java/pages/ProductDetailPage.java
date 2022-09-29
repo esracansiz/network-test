@@ -8,8 +8,7 @@ public class ProductDetailPage extends BasePage{
 
     By addToCartButtonLocator = By.cssSelector("#mainContent > div > div.container > div.row > div.col-12.col-lg-4 > div > div.product__buttons > button.product__button.-addToCart.btn.-black");
     By size = By.cssSelector("#mainContent > div > div.container > div.row > div.col-12.col-lg-4 > div > div.product__sizes > div.product__content.-sizes > div:nth-child(6) > label");
-
-
+    By goToBasket = By.xpath("//*[@class='button -primary header__basket--checkout header__basketModal -checkout']");
 
     public ProductDetailPage(WebDriver driver) {
         super(driver);
@@ -20,14 +19,11 @@ public class ProductDetailPage extends BasePage{
     }
 
     public void addToCart() {
-
         click(size);
-    }
-    public void clickToCart(){
         click(addToCartButtonLocator);
-
+        click(goToBasket);
+        System.out.println("Sepete gidildi");
     }
-
 }
 
 

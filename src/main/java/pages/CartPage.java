@@ -14,8 +14,6 @@ public class CartPage extends BasePage {
     }
 
     public boolean checkIfProductAdded() {
-
-
         return getProducts().size() > 0 ;
     }
 

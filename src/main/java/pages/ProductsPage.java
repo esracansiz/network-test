@@ -10,7 +10,6 @@ public class ProductsPage extends BasePage {
     By productNameLocator =  By.cssSelector("#product-135995 > div > div.product__header > a.product__imageWrapper");
 
 
-
     public ProductsPage(WebDriver driver) {
         super(driver);
     }
